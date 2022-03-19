@@ -1,10 +1,17 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/header';
+import Main from './components/Main';
 
 
 
 const App = () => {
-  return ;
+  return (
+    <div className='main-wrapper'>
+      <Header />
+      <Main />
+    </div>
+  );
 }
 
 
