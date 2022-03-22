@@ -6,19 +6,19 @@ const Nav = () => {
         <nav className={classes.nav}>
             <ul>
                 <li>
-                    <a href="#">Profile</a>
+                    <a href="../profile/Profile.jsx">Profile</a>
                 </li>
                 <li>
-                    <a href="#">Messages</a>
+                    <a href="../Dialogs/Dialogs.jsx">Messages</a>
                 </li>
                 <li>
-                    <a href="#">News</a>
+                    <a href="../News/News.jsx">News</a>
                 </li>
                 <li>
-                    <a href="#">Music</a>
+                    <a href="../Music/Music.jsx">Music</a>
                 </li>
                 <li>
-                    <a href="#">Settings</a>
+                    <a href="../Settings/Settings.jsx">Settings</a>
                 </li>
             </ul>
         </nav>

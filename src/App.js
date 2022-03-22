@@ -1,4 +1,3 @@
-
 import './App.css';
 import Header from './components/Header/header';
 import Main from './components/main-Content/Main';
@@ -7,10 +6,13 @@ import Main from './components/main-Content/Main';
 
 const App = () => {
   return (
-    <div className='main-wrapper'>
-      <Header />
-      <Main />
-    </div>
+    
+      <div className='main-wrapper'>
+        <Header />
+        <Main />
+      </div>
+    
+
   );
 }
 
