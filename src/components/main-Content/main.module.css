@@ -4,8 +4,7 @@
     display: grid;
   
     grid-template-areas: 
-    'nav content'
-    ;
+    'nav content' ;
   
     grid-template-rows: 1fr;
     grid-template-columns: 2fr 10fr;
