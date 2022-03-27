@@ -11,7 +11,7 @@ const Messages = (props) => {
     return (
         <div className={classes.messages}>
             {newMessages}
-            <CreateMessage/>
+            <CreateMessage createMessage={props.createMessage}/>
         </div>
     )
 }

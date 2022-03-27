@@ -19,7 +19,10 @@ const Main = (props) => {
                 <Nav />
                 <Routes>
                     <Route path='/profile/Profile/*' element={<Profile />} />
-                    <Route path='/Dialogs/Dialogs/*' element={<Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData}/>} />
+                    <Route path='/Dialogs/Dialogs/*' element={<Dialogs 
+                            dialogsData={props.dialogsData} 
+                            messagesData={props.messagesData} 
+                            createMessage={props.createMessage}/>} />
                     <Route path='/News/News' element={<News />} />
                     <Route path='/Music/Music' element={<Music />} />
                     <Route path='/Settings/Settings' element={<Settings />} />

@@ -9,7 +9,7 @@ const App = (props) => {
     
       <div className='main-wrapper'>
         <Header />
-        <Main dialogsData={props.dialogsData} messagesData={props.messagesData}/>
+        <Main dialogsData={props.dialogsData} messagesData={props.messagesData} createMessage={props.createMessage}/>
       </div>
     
 

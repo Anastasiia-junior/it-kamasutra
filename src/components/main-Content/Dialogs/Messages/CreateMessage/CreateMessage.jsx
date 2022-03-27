@@ -7,7 +7,9 @@ let CreateMessage = (props) => {
     let textInput = React.createRef();
 
     function handleClick() {
-        alert(textInput.current.value);
+        let text = textInput.current.value;
+        props.createMessage(text);
+        textInput.current.value = '';
     }
 
     return (
