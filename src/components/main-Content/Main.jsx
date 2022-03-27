@@ -8,17 +8,21 @@ import Settings from './Settings/Setting';
 import Music from './Music/Music';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-const Main = () => {
+
+
+const Main = (props) => {
+   
+
     return (
         <BrowserRouter>
             <main className={classes.main}>
                 <Nav />
                 <Routes>
-                    <Route path='/profile/Profile.jsx' element={<Profile />} />
-                    <Route path='/Dialogs/Dialogs.jsx' element={<Dialogs />} />
-                    <Route path='/News/News.jsx' element={<News />} />
-                    <Route path='/Music/Music.jsx' element={<Music />} />
-                    <Route path='/Settings/Settings.jsx' element={<Settings />} />
+                    <Route path='/profile/Profile/*' element={<Profile />} />
+                    <Route path='/Dialogs/Dialogs/*' element={<Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData}/>} />
+                    <Route path='/News/News' element={<News />} />
+                    <Route path='/Music/Music' element={<Music />} />
+                    <Route path='/Settings/Settings' element={<Settings />} />
                 </Routes>
             </main>
         </BrowserRouter>

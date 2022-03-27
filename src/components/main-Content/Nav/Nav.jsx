@@ -1,24 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classes from './nav.module.css';
 
 const Nav = () => {
     return (
         <nav className={classes.nav}>
             <ul>
-                <li>
-                    <a href="../profile/Profile.jsx">Profile</a>
+                <li className={classes.item}>
+                    <Link to="../profile/Profile" className={classes.visited} >Profile</Link>
                 </li>
                 <li>
-                    <a href="../Dialogs/Dialogs.jsx">Messages</a>
+                    <Link to="../Dialogs/Dialogs" className={classes.visited}>Messages</Link>
                 </li>
                 <li>
-                    <a href="../News/News.jsx">News</a>
+                    <Link to="../News/News" className={classes.visited}>News</Link>
                 </li>
                 <li>
-                    <a href="../Music/Music.jsx">Music</a>
+                    <Link to="../Music/Music" className={classes.visited}>Music</Link>
                 </li>
                 <li>
-                    <a href="../Settings/Settings.jsx">Settings</a>
+                    <Link to="../Settings/Settings" className={classes.visited}>Settings</Link>
                 </li>
             </ul>
         </nav>

@@ -4,12 +4,12 @@ import Main from './components/main-Content/Main';
 
 
 
-const App = () => {
+const App = (props) => {
   return (
     
       <div className='main-wrapper'>
         <Header />
-        <Main />
+        <Main dialogsData={props.dialogsData} messagesData={props.messagesData}/>
       </div>
     
 

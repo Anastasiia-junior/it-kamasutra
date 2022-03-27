@@ -2,4 +2,8 @@
     grid-area: nav;
   
     background-color: cadetblue;
+  } 
+
+ a:visited {
+    color: green;
   }
