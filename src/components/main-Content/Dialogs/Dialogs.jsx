@@ -8,10 +8,13 @@ import UsersDialogs from './usersDialogs/UsersDialogs';
 
 const Dialogs = (props) => {
 
-    return (
+    return ( 
         <div className={classes.content}>
-            <UsersDialogs dialogsData={props.dialogsData}/>
-            <Messages messagesData={props.messagesData} createMessage={props.createMessage}/>
+            <UsersDialogs 
+                dialogsData={props.dialogsPage.dialogsData}/>
+            <Messages 
+                messagesData={props.dialogsPage.messagesData} 
+                createMessage={props.createMessage}/>
         </div>
     )
 }

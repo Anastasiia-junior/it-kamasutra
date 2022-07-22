@@ -5,11 +5,15 @@ import Main from './components/main-Content/Main';
 
 
 const App = (props) => {
+  
   return (
     
       <div className='main-wrapper'>
         <Header />
-        <Main dialogsData={props.dialogsData} messagesData={props.messagesData} createMessage={props.createMessage}/>
+        <Main 
+          state = {props.state}
+          createMessage={props.createMessage}
+          />
       </div>
     
 

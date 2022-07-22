@@ -6,9 +6,10 @@ import {createMessage} from './redux/State';
 
 
 let renderEntireTree = (props) => {
+  console.log(props);
     ReactDOM.render(
         <React.StrictMode>
-          <App messagesData={props.messagesData} dialogsData={props.dialogsData} createMessage={createMessage}/>
+          <App state = {props} createMessage={createMessage}/>
         </React.StrictMode>,
         document.getElementById('root')
       );
