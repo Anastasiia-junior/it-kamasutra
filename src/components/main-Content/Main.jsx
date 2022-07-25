@@ -21,6 +21,7 @@ const Main = (props) => {
                     <Route path='/profile/Profile/*' 
                         element={<Profile 
                              profilePage={props.state.profilePage}
+                             createPosts={props.createPosts}
                             />} 
                             />
 

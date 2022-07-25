@@ -1,14 +1,22 @@
 import React from 'react';
-import classes from './posts.module.css';
+import CreatePosts from './createPosts/CreatePosts';
+//import classes from './posts.module.css';
 import Post from './MyPost/post';
 
-const Posts = () => {
+const Posts = (props) => {
+
+    let arrayOfPosts = props.postsData;
+    
+    let mapOfArrayOfPosts = arrayOfPosts.map((element) => {
+    return   ( <Post 
+        description={element.description} 
+        likes={element.likes}/>)
+});
+
     return (
         <div>
-           <Post description='1 post'></Post> 
-           <Post description='2 post'></Post>
-           <Post description='3 post'></Post>
-           <Post description='4 post'></Post>
+            {mapOfArrayOfPosts}
+            <CreatePosts createPosts={props.createPosts}></CreatePosts>
         </div>
     )
 }

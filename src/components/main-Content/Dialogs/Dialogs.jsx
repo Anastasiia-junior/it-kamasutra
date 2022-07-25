@@ -8,7 +8,7 @@ import UsersDialogs from './usersDialogs/UsersDialogs';
 
 const Dialogs = (props) => {
 
-    return ( 
+    return (  
         <div className={classes.content}>
             <UsersDialogs 
                 dialogsData={props.dialogsPage.dialogsData}/>

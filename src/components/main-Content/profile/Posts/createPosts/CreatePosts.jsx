@@ -1,16 +1,15 @@
 import React from 'react';
-//import classes from './.module.css';
 
-
-const CreateMessage = (props) => {
+const CreatePosts = (props) => {
 
     let textInput = React.createRef();
 
     function handleClick() {
         let text = textInput.current.value;
-        props.createMessage(text);
+        props.createPosts(text);
         textInput.current.value = '';
     }
+
 
     return (
         <div>
@@ -18,12 +17,12 @@ const CreateMessage = (props) => {
 
             <input
                 type="button"
-                value="send message"
+                value="add a new post"
                 onClick={handleClick}
             />
+            
         </div>
-    );
+    )
+}
 
-};
-
-export default CreateMessage;
+export default CreatePosts;

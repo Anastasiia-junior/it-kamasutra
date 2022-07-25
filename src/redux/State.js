@@ -4,7 +4,10 @@ let state = {
 
   profilePage: {
     postsData: [
-      
+      {id: 1, description: 'jkdhcihsdic hi jdhvihd', likes: 15},
+      {id: 2, description: 'fbdfbfb', likes: 5},
+      {id: 3, description: 'lkhduisd dhvuih kjhuihcu hnidhv  jvh schn hduihduv ', likes: 10}
+
     ]
   },
 
@@ -44,8 +47,19 @@ export let createMessage = (message) => {
     text: message,
   };
 
-  state.messagesData.push(newMessage);
+  state.dialogsPage.messagesData.push(newMessage);
   renderEntireTree(state);
 };
+
+export let createPosts = (message) => {
+  let newPost = {
+    id: 4, 
+    description: message,
+    likes: 23
+  };
+
+  state.profilePage.postsData.push(newPost);
+  renderEntireTree(state);
+}
 
 export default state;
