@@ -16,7 +16,9 @@ const Posts = (props) => {
     return (
         <div>
             {mapOfArrayOfPosts}
-            <CreatePosts createPosts={props.createPosts}></CreatePosts>
+            <CreatePosts createPosts={props.createPosts}
+                        updatePostText={props.updatePostText}
+                        newPostText={props.newPostText}/>
         </div>
     )
 }

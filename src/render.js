@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {createMessage} from './redux/State';
-import {createPosts} from './redux/State';
+import {createMessage, createPosts, updatePostText} from './redux/State';
+
 
 
 let renderEntireTree = (props) => {
@@ -13,7 +13,9 @@ let renderEntireTree = (props) => {
           <App 
             state = {props} 
             createMessage={createMessage}
-            createPosts={createPosts}/>
+            createPosts={createPosts}
+            updatePostText={updatePostText}
+            />
         </React.StrictMode>,
         document.getElementById('root')
       );

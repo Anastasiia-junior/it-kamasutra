@@ -22,6 +22,7 @@ const Main = (props) => {
                         element={<Profile 
                              profilePage={props.state.profilePage}
                              createPosts={props.createPosts}
+                             updatePostText={props.updatePostText}
                             />} 
                             />
 

@@ -8,7 +8,8 @@ let state = {
       {id: 2, description: 'fbdfbfb', likes: 5},
       {id: 3, description: 'lkhduisd dhvuih kjhuihcu hnidhv  jvh schn hduihduv ', likes: 10}
 
-    ]
+    ],
+    newPostText: ''
   },
 
   dialogsPage: {
@@ -41,6 +42,9 @@ let state = {
   
 };
 
+
+window.state = state;
+
 export let createMessage = (message) => {
   let newMessage = {
     id: 7,
@@ -48,18 +52,25 @@ export let createMessage = (message) => {
   };
 
   state.dialogsPage.messagesData.push(newMessage);
+
   renderEntireTree(state);
 };
 
-export let createPosts = (message) => {
+export let createPosts = () => {
   let newPost = {
     id: 4, 
-    description: message,
+    description: state.profilePage.newPostText,
     likes: 23
   };
 
   state.profilePage.postsData.push(newPost);
+
+  state.profilePage.newPostText = '';
   renderEntireTree(state);
 }
 
+export let updatePostText = (text) => {
+  state.profilePage.newPostText = text;
+  renderEntireTree(state);
+}
 export default state;

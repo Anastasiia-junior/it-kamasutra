@@ -14,6 +14,7 @@ const App = (props) => {
           state = {props.state}
           createMessage={props.createMessage}
           createPosts={props.createPosts}
+          updatePostText={props.updatePostText}
           />
       </div>
     

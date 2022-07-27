@@ -7,13 +7,19 @@ const CreatePosts = (props) => {
     function handleClick() {
         let text = textInput.current.value;
         props.createPosts(text);
-        textInput.current.value = '';
+        
     }
 
+    function onChangeClick() {
+        let newText = textInput.current.value;
+        props.updatePostText(newText);
+    }
 
     return (
         <div>
-            <textarea ref={textInput} />
+            <textarea ref={textInput} 
+                    onChange={onChangeClick}
+                    value={props.newPostText}/>
 
             <input
                 type="button"
