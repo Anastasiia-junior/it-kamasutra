@@ -4,27 +4,26 @@ const CreatePosts = (props) => {
 
     let textInput = React.createRef();
 
-    function handleClick() {
-        let text = textInput.current.value;
-        props.createPosts(text);
+    function createPost() {
+        props.dispatch({type: 'CREATE-POSTS'});
         
     }
 
-    function onChangeClick() {
+    function updatePostText() {
         let newText = textInput.current.value;
-        props.updatePostText(newText);
+        props.dispatch({type: 'UPDATE-POST-TEXT', newText: newText});
     }
 
     return (
         <div>
             <textarea ref={textInput} 
-                    onChange={onChangeClick}
+                    onChange={updatePostText}
                     value={props.newPostText}/>
 
             <input
                 type="button"
                 value="add a new post"
-                onClick={handleClick}
+                onClick={createPost}
             />
             
         </div>

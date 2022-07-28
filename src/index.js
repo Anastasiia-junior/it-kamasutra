@@ -14,18 +14,15 @@ let renderEntireTree = (props) => {
     ReactDOM.render(
         <React.StrictMode>
           <App 
-            state = {props.getState()} 
-            createMessage={props.createMessage.bind(props)}
-            createPosts={props.createPosts.bind(props)}
-            updatePostText={props.updatePostText.bind(props)}
-            />
+            state = {props} 
+            dispatch = {store.dispatch.bind(store)}/>
         </React.StrictMode>,
         document.getElementById('root')
       );
 };
 
 
-renderEntireTree(store);
+renderEntireTree(store.getState());
 
 store.subscriber(renderEntireTree);
 

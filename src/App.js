@@ -12,9 +12,7 @@ const App = (props) => {
         <Header />
         <Main 
           state = {props.state}
-          createMessage={props.createMessage}
-          createPosts={props.createPosts}
-          updatePostText={props.updatePostText}
+          dispatch = {props.dispatch}
           />
       </div>
     

@@ -43,31 +43,64 @@ let store = {
   getState() {
     return (this._state);
   },
-  createMessage(message) {
-    let newMessage = {
-      id: 7,
-      text: message,
-    };
-  
-    this._state.dialogsPage.messagesData.push(newMessage);
-  
-    this._callSubscriber(store);
-  },
-  createPosts() {
-    let newPost = {
-      id: 4, 
-      description: this._state.profilePage.newPostText,
-      likes: 23
-    };
-    this._state.profilePage.postsData.push(newPost);
 
-    this._state.profilePage.newPostText = '';
-    this._callSubscriber(store);
+  dispatch(action) {
+    if (action.type === 'CREATE-MESSAGE') {
+      let newMessage = {
+        id: 7,
+        text: action.message,
+      };
+    
+      this._state.dialogsPage.messagesData.push(newMessage);
+    
+      this._callSubscriber(this.getState());
+    } else if ( action.type === 'CREATE-POSTS') {
+      
+      let newPost = {
+        id: 4, 
+        description: this._state.profilePage.newPostText,
+        likes: 23
+      };
+      this._state.profilePage.postsData.push(newPost);
+  
+      this._state.profilePage.newPostText = '';
+      this._callSubscriber(this.getState());
+
+    } else if (action.type === 'UPDATE-POST-TEXT') {
+      
+      this._state.profilePage.newPostText = action.newText;
+      this._callSubscriber(this.getState());
+    }
   },
-  updatePostText(text) {
-    this._state.profilePage.newPostText = text;
-    this._callSubscriber(store);
-  },
+
+  //старые методы, которые теперь сидят в dispatch
+  // createMessage(message) {
+  //   let newMessage = {
+  //     id: 7,
+  //     text: message,
+  //   };
+  
+  //   this._state.dialogsPage.messagesData.push(newMessage);
+  
+  //   this._callSubscriber(store);
+  // },
+  // createPosts() {
+  //   let newPost = {
+  //     id: 4, 
+  //     description: this._state.profilePage.newPostText,
+  //     likes: 23
+  //   };
+  //   this._state.profilePage.postsData.push(newPost);
+
+  //   this._state.profilePage.newPostText = '';
+  //   this._callSubscriber(store);
+  // },
+  // updatePostText(text) {
+  //   this._state.profilePage.newPostText = text;
+  //   this._callSubscriber(store);
+  // },
+
+
   subscriber(observer) {
     this._callSubscriber = observer;
   },

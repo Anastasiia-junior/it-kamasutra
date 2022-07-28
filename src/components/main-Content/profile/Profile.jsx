@@ -9,9 +9,8 @@ const Profile = (props) => {
                 <img src='https://kald.secure2.footprint.net/fileadmin/data/seiten/produkte/badewannen/produktbilder/teaser-badewannen_smaller.png' alt='dvd' />
             </div>
             <Posts 
-                createPosts={props.createPosts}
+                dispatch={props.dispatch}
                 postsData={props.profilePage.postsData}
-                updatePostText={props.updatePostText}
                 newPostText={props.profilePage.newPostText}/>
                 
         </div>
