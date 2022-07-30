@@ -62,39 +62,7 @@ let store = {
 
     this._callSubscriber(this.getState());
 
-    // if (action.type === CREATE_MESSAGE) {
-    //   let newMessage = {
-    //     id: 7,
-    //     text: this._state.dialogsPage.message,
-    //   };
-
-    //   this._state.dialogsPage.messagesData.push(newMessage);
-    //   this._state.dialogsPage.message = '';
-
-    //   this._callSubscriber(this.getState());
-
-    // } else if (action.type === UPDATE_TEXT_MESSAGE) {
-
-    //   this._state.dialogsPage.message = action.newText;
-    //   this._callSubscriber(this.getState());
-
-    // } else if (action.type === CREATE_POSTS) {
-
-    //   let newPost = {
-    //     id: 4,
-    //     description: this._state.profilePage.newPostText,
-    //     likes: 23
-    //   };
-    //   this._state.profilePage.postsData.push(newPost);
-
-    //   this._state.profilePage.newPostText = '';
-    //   this._callSubscriber(this.getState());
-
-    // } else if (action.type === UPDATE_POST_TEXT) {
-
-    //   this._state.profilePage.newPostText = action.newText;
-    //   this._callSubscriber(this.getState());
-    // }
+    
   },
 
 
