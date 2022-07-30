@@ -14,7 +14,8 @@ const Dialogs = (props) => {
                 dialogsData={props.dialogsPage.dialogsData}/>
             <Messages 
                 messagesData={props.dialogsPage.messagesData} 
-                createMessage={props.createMessage}/>
+                message={props.dialogsPage.message}
+                dispatch = {props.dispatch}/>
         </div>
     )
 }
