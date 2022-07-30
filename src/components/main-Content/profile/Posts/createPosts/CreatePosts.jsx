@@ -1,17 +1,19 @@
 import React from 'react';
+import {createPostActionCreator, updatePostTextActionCreator} from '../../../../../redux/State'
+
 
 const CreatePosts = (props) => {
 
     let textInput = React.createRef();
 
     function createPost() {
-        props.dispatch({type: 'CREATE-POSTS'});
+        props.dispatch(createPostActionCreator());
         
     }
 
     function updatePostText() {
         let newText = textInput.current.value;
-        props.dispatch({type: 'UPDATE-POST-TEXT', newText: newText});
+        props.dispatch(updatePostTextActionCreator(newText));
     }
 
     return (

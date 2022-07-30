@@ -1,3 +1,6 @@
+const CREATE_POSTS = 'CREATE-POSTS';
+const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
+
 let store = {
   _state: {
 
@@ -54,7 +57,7 @@ let store = {
       this._state.dialogsPage.messagesData.push(newMessage);
     
       this._callSubscriber(this.getState());
-    } else if ( action.type === 'CREATE-POSTS') {
+    } else if ( action.type === CREATE_POSTS) {
       
       let newPost = {
         id: 4, 
@@ -66,7 +69,7 @@ let store = {
       this._state.profilePage.newPostText = '';
       this._callSubscriber(this.getState());
 
-    } else if (action.type === 'UPDATE-POST-TEXT') {
+    } else if (action.type === UPDATE_POST_TEXT) {
       
       this._state.profilePage.newPostText = action.newText;
       this._callSubscriber(this.getState());
@@ -108,6 +111,14 @@ let store = {
     console.log('state has been changed');
   }
 
+}
+
+export const createPostActionCreator = () => {
+  return {type: CREATE_POSTS};
+};
+
+export const updatePostTextActionCreator = (newText) => {
+  return {type: UPDATE_POST_TEXT, newText: newText}
 }
 
 
