@@ -1,5 +1,6 @@
 import React from 'react';
-import CreatePosts from './createPosts/CreatePosts';
+import CreatePostsContainer from './createPosts/create-posts-container';
+// import CreatePosts from './createPosts/CreatePosts';
 //import classes from './posts.module.css';
 import Post from './MyPost/post';
 
@@ -16,8 +17,7 @@ const Posts = (props) => {
     return (
         <div>
             {mapOfArrayOfPosts}
-            <CreatePosts dispatch = {props.dispatch}
-                        newPostText={props.newPostText}/>
+            <CreatePostsContainer />
         </div>
     )
 }

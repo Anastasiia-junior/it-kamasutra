@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './profile.module.css';
-import Posts from './Posts/posts';
+import PostsContainer from './Posts/posts-container';
 
 const Profile = (props) => {
     return (
@@ -8,10 +8,7 @@ const Profile = (props) => {
             <div className={classes.content_banner}>
                 <img src='https://kald.secure2.footprint.net/fileadmin/data/seiten/produkte/badewannen/produktbilder/teaser-badewannen_smaller.png' alt='dvd' />
             </div>
-            <Posts 
-                dispatch={props.dispatch}
-                postsData={props.profilePage.postsData}
-                newPostText={props.profilePage.newPostText}/>
+            <PostsContainer/>
                 
         </div>
     )

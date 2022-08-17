@@ -1,5 +1,4 @@
 import React from 'react';
-import {createPostActionCreator, updatePostTextActionCreator} from '../../../../../redux/State'
 
 
 const CreatePosts = (props) => {
@@ -7,13 +6,13 @@ const CreatePosts = (props) => {
     let textInput = React.createRef();
 
     function createPost() {
-        props.dispatch(createPostActionCreator());
+        props.createPost();
         
     }
 
     function updatePostText() {
         let newText = textInput.current.value;
-        props.dispatch(updatePostTextActionCreator(newText));
+        props.updatePostText(newText);
     }
 
     return (

@@ -20,8 +20,8 @@ const Main = (props) => {
                 <Routes>
                     <Route path='/profile/Profile/*' 
                         element={<Profile 
-                             profilePage={props.state.profilePage}
-                             dispatch = {props.dispatch}
+                            //  profilePage={props.state.profilePage}
+                            //  dispatch = {props.dispatch}
                             />} 
                             />
 
