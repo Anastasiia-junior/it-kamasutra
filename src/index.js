@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 
 ReactDOM.render(
       <React.StrictMode>
-        <Provider value={store}>
+        <Provider store={store}>
           <App
             // state={props}
             // dispatch={store.dispatch.bind(store)} 

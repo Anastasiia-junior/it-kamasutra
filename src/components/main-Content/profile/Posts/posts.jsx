@@ -11,7 +11,9 @@ const Posts = (props) => {
     let mapOfArrayOfPosts = arrayOfPosts.map((element) => {
     return   ( <Post 
         description={element.description} 
-        likes={element.likes}/>)
+        likes={element.likes}
+        key={element.id}
+        />)
 });
 
     return (

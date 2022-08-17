@@ -1,8 +1,9 @@
 import React from 'react';
 
 import classes from './Dialogs.module.css';
-import Messages from './Messages/Messages';
-import UsersDialogs from './usersDialogs/UsersDialogs';
+import MessagesContainer from './Messages/Messages-container';
+import UsersDialogsContainer from './usersDialogs/UsersDialogContainer';
+
 
 
 
@@ -10,12 +11,14 @@ const Dialogs = (props) => {
 
     return (  
         <div className={classes.content}>
-            <UsersDialogs 
-                dialogsData={props.dialogsPage.dialogsData}/>
-            <Messages 
-                messagesData={props.dialogsPage.messagesData} 
-                message={props.dialogsPage.message}
-                dispatch = {props.dispatch}/>
+            <UsersDialogsContainer
+                //dialogsData={props.dialogsPage.dialogsData}
+                />
+            <MessagesContainer 
+               // messagesData={props.dialogsPage.messagesData} 
+                // message={props.dialogsPage.message}
+                //dispatch = {props.dispatch}
+                />
         </div>
     )
 }

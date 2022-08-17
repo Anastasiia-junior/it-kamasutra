@@ -27,23 +27,27 @@ const Main = (props) => {
 
                     <Route path='/Dialogs/Dialogs/*' 
                         element={<Dialogs 
-                            dialogsPage = {props.state.dialogsPage}
-                            dispatch = {props.dispatch}/>} 
+                            // dialogsPage = {props.state.dialogsPage}
+                            // dispatch = {props.dispatch}
+                            />} 
                             />
 
                     <Route path='/News/News' 
                         element={<News 
-                            newsPage = {props.state.newsPage}/>} 
+                            //newsPage = {props.state.newsPage}
+                            />} 
                             />
 
                     <Route path='/Music/Music' 
                         element={<Music 
-                            musicPage = {props.state.musicPage}/>} 
+                            //musicPage = {props.state.musicPage}
+                            />} 
                             />
 
                     <Route path='/Settings/Settings' 
                         element={<Settings 
-                            settingsPage = {props.state.settingsPage}/>} 
+                            //settingsPage = {props.state.settingsPage}
+                            />} 
                             />
                 </Routes>
             </main>

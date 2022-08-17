@@ -1,6 +1,6 @@
 import React from 'react';
 //import classes from './.module.css';
-import {updateTextMessageActionCreator, sendMessageActionCreator } from '../../../../../redux/State'
+
 
 
 const CreateMessage = (props) => {
@@ -9,11 +9,11 @@ const CreateMessage = (props) => {
 
     function updateTextInput() {
         let text = textInput.current.value; 
-        props.dispatch(updateTextMessageActionCreator(text));
+        props.updateTextInput(text);
     }
 
     function sendMessage() {
-        props.dispatch(sendMessageActionCreator());
+        props.sendMessage();
     }
 
     return (
