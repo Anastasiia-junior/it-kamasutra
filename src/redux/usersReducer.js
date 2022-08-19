@@ -4,24 +4,24 @@ const SET_USERS = 'SET_USERS';
 
 let initialState = {
     users: [
-        {
-            id: 1, name: 'Andrew', location: {
-                city: 'Minsk', country: 'Belarus'
-            }, followed: true, 
-            photoUrl: 'https://ps.w.org/simple-user-avatar/assets/icon-256x256.png?rev=2413146'
-        },
-        {
-            id: 2, name: 'Klava', location: {
-                city: 'Moscow', country: 'Russia'
-            }, followed: false, 
-            photoUrl: 'https://ps.w.org/simple-user-avatar/assets/icon-256x256.png?rev=2413146'
-        },
-        {
-            id: 3, name: 'Lina', location: {
-                city: 'Lima', country: 'Peru'
-            }, followed: true, 
-            photoUrl: 'https://ps.w.org/simple-user-avatar/assets/icon-256x256.png?rev=2413146'
-        }
+        // {
+        //     id: 1, name: 'Andrew', location: {
+        //         city: 'Minsk', country: 'Belarus'
+        //     }, followed: true, 
+        //     photoUrl: 'https://ps.w.org/simple-user-avatar/assets/icon-256x256.png?rev=2413146'
+        // },
+        // {
+        //     id: 2, name: 'Klava', location: {
+        //         city: 'Moscow', country: 'Russia'
+        //     }, followed: false, 
+        //     photoUrl: 'https://ps.w.org/simple-user-avatar/assets/icon-256x256.png?rev=2413146'
+        // },
+        // {
+        //     id: 3, name: 'Lina', location: {
+        //         city: 'Lima', country: 'Peru'
+        //     }, followed: true, 
+        //     photoUrl: 'https://ps.w.org/simple-user-avatar/assets/icon-256x256.png?rev=2413146'
+        // }
     ]
 }
 
@@ -50,7 +50,7 @@ const usersReducer = (state = initialState, action) => {
         case SET_USERS:
             return {
                 ...state,
-                users: [...state.users, ...action.users]
+                users: [ ...action.users]
             }
         default:
             return state;
