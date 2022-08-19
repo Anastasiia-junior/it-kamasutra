@@ -11,40 +11,11 @@ import { Provider } from 'react-redux';
 ReactDOM.render(
       <React.StrictMode>
         <Provider store={store}>
-          <App
-            // state={props}
-            // dispatch={store.dispatch.bind(store)} 
-            />
+          <App/>
         </Provider>
       </React.StrictMode>,
       document.getElementById('root')
     );
 
 
-// let renderEntireTree = (props) => {
-//   console.log(props);
-
-//   ReactDOM.render(
-//     <React.StrictMode>
-//       <Provider value={store}>
-//         <App
-//           // state={props}
-//           // dispatch={store.dispatch.bind(store)} 
-//           />
-//       </Provider>
-//     </React.StrictMode>,
-//     document.getElementById('root')
-//   );
-// };
-
-
-// renderEntireTree(store.getState());
-
-// store.subscribe(() => {
-//   renderEntireTree(store.getState());
-// });
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

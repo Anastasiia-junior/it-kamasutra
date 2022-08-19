@@ -7,6 +7,7 @@ import News from './News/News';
 import Settings from './Settings/Setting';
 import Music from './Music/Music';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import UsersContainer from './Users/UsersContainer';
 
 
 
@@ -19,35 +20,27 @@ const Main = (props) => {
                 <Nav />
                 <Routes>
                     <Route path='/profile/Profile/*' 
-                        element={<Profile 
-                            //  profilePage={props.state.profilePage}
-                            //  dispatch = {props.dispatch}
-                            />} 
+                        element={<Profile/>} 
                             />
 
                     <Route path='/Dialogs/Dialogs/*' 
-                        element={<Dialogs 
-                            // dialogsPage = {props.state.dialogsPage}
-                            // dispatch = {props.dispatch}
-                            />} 
+                        element={<Dialogs/>} 
                             />
 
+                    <Route path='/Users/*'
+                        element={<UsersContainer/>}
+                        />
+
                     <Route path='/News/News' 
-                        element={<News 
-                            //newsPage = {props.state.newsPage}
-                            />} 
+                        element={<News/>} 
                             />
 
                     <Route path='/Music/Music' 
-                        element={<Music 
-                            //musicPage = {props.state.musicPage}
-                            />} 
+                        element={<Music/>} 
                             />
 
                     <Route path='/Settings/Settings' 
-                        element={<Settings 
-                            //settingsPage = {props.state.settingsPage}
-                            />} 
+                        element={<Settings />} 
                             />
                 </Routes>
             </main>

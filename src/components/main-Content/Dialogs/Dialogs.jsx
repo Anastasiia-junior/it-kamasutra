@@ -11,14 +11,8 @@ const Dialogs = (props) => {
 
     return (  
         <div className={classes.content}>
-            <UsersDialogsContainer
-                //dialogsData={props.dialogsPage.dialogsData}
-                />
-            <MessagesContainer 
-               // messagesData={props.dialogsPage.messagesData} 
-                // message={props.dialogsPage.message}
-                //dispatch = {props.dispatch}
-                />
+            <UsersDialogsContainer />
+            <MessagesContainer  />
         </div>
     )
 }
